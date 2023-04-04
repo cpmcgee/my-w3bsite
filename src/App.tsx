@@ -1,36 +1,22 @@
 // import { ConnectWallet } from "@thirdweb-dev/react";
-import "./styles/Home.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/navbar/navbar';
+import Home from './components/home/home';
+import Web2 from './components/web2/web2';
+import Web3 from './components/web3/web3';
+import './globals.css'
 
-export default function Home() {
+export default function App() {
   return (
-    <div className="container">
-      <main className="main">
-        <h1 className="title">
-          Chris McGee on Web3
-        </h1>
-
-        <p className="description">
-          Software Engineer, FinTech Enthusiast
-        </p>
-
-        {/* <div className="connect">
-          <ConnectWallet />
-        </div> */}
-
-        <div className="grid">
-          <a href="https://github.com/cpmcgee/" className="card github" target="_blank" rel="noopener noreferrer">
-            <h2>GitHub &rarr;</h2>
-          </a>
-
-          <a href="https://twitter.com/cm66350859/" className="card twitter" target="_blank" rel="noopener noreferrer">
-            <h2>Twitter &rarr;</h2>
-          </a>
-
-          <a href="https://www.linkedin.com/in/chris-mcgee-507ab3b3/" className="card linkedin" target="_blank" rel="noopener noreferrer">
-            <h2>LinkedIn &rarr;</h2>
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/web2' element={<Web2/>} />
+          <Route path='/web3' element={<Web3/>} />
+        </Routes>
+      </Router>
+    </>
   );
 }
