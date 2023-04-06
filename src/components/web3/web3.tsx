@@ -9,6 +9,10 @@ export default function Web3() {
           Web3 Landing
         </h1>
 
+        <p className="description">
+          (WIP): web3 social media (e.g. Nostr), IPFS, and novel blockchain interactions.
+        </p>
+
         <div className="connect">
           <ConnectWallet />
         </div>

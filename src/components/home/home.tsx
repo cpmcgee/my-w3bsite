@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./home.css";
+//import "./home.css";
 
 export default function Home() {
   return (
@@ -14,13 +14,17 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <li className="card">
-            <Link to="/web2">Web2</Link>
-          </li>
+          <Link to="/web2">
+            <div className="card">
+              <h2>Web2 Landing</h2>
+            </div>
+          </Link>
 
-          <li className="card">
-            <Link to="/web3">Web3</Link>
-          </li>
+          <Link to="/web3">
+            <div className="card">
+              <h2>Web3 Landing</h2>
+            </div>
+          </Link>
         </div>
       </main>
     </div>
